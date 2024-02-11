@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Bootstrap-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="car&rates.css">
+    <title>Cars & Rates</title>
+</head>
+<body>
+    <!------------------------ Navbar ----------------------->
+    <section id="header">
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+    
+        <div class="logo">
+            <img src="Images/logo.png" alt="logo">
+        </div>
+    
+        <ul>
+            <li><a href="web.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="cars&rates.html">Cars & Rates</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="login.html" class="login-form">Login/Register</a></li>
+        </ul>
+    </section>
+    
+    <!------------------------ Hero banner section ----------------------->
+    <section id="hero">
+        <div class="contentbox">
+            <h1>Best Rates In Singapore </h1>
+            <p>*Terms and conditons apply.</p>
+            <a href="cars&rates.html">Rent Now</a>
+        </div>
+    </section>
+
+    <!------------------------ Car Listing section ----------------------->
+    <header>
+        <div class="container">
+            <h1>Car listing</h1>
+            <div class="search-section">
+                <form action="" onsubmit="return false">
+                    <input type="text" id="search" placeholder="Search Vehicles">
+                </form>
+            </div>
+            <div class="filter-box">
+                <a href="#" class="btn active" data-filter="all">All</a>
+                <a href="#" class="btn" data-filter="Sedan">Sedan</a>
+                <a href="#" class="btn" data-filter="Hatchback">Hatchback</a>
+                <a href="#" class="btn" data-filter="SUV">SUV</a>
+                <a href="#" class="btn" data-filter="Van">Van</a>
+            </div>
+        </div>
+    </header>
+    <!----------------------- Sedan ----------------------->
+    <section class="container" id="car-products">
+        <div class="car-products Sedan">
+            <img src="Images\sedan-filter.jpeg">
+            <div class="car-product-detail">
+                <h2>Hyundai Verna</h2>
+                <p>$65/per day</p>
+                <a href="#" class="btnBook" onclick="openForm()">Book</a>
+            </div>
+        </div>
+        <div class="car-products Sedan">
+            <img src="Images\sedan2-filter.jpeg">
+            <div class="car-product-detail">
+                <h2>Honda City Hybrid</h2>
+                <p>$60/per day</p>
+                <a href="#" class="btnBook">Book</a>
+            </div>
+        </div>
+        <!----------------------- Hatchback ----------------------->
+        <div class="car-products Hatchback">
+            <img src="Images\sedan.jpeg">
+            <div class="car-product-detail">
+                <h2>Volkswagen Virtus</h2>
+                <p>$60/per day</p>
+                <a href="#" class="btnBook">Book</a>
+            </div>
+        </div>
+        <div class="car-products Hatchback">
+            <img src="Images\hatchback-filter.jpeg">
+            <div class="car-product-detail">
+                <h2>Maruti Suzuki Swift</h2>
+                <p>$55/per day</p>
+                <a href="#" class="btnBook">Book</a>
+            </div>
+        </div>
+        <!----------------------- SUV ----------------------->
+        <div class="car-products SUV">
+            <img src="Images\suv.jpeg">
+            <div class="car-product-detail">
+                <h2>Toyota Urban Cruiser</h2>
+                <p>$64/per day</p>
+                <a href="#" class="btnBook">Book</a>
+            </div>
+        </div>
+        <!------------------------ VAN ----------------------->
+        <div class="car-products Van">
+            <img src="Images\van.jpeg">
+            <div class="car-product-detail">
+                <h2>Maruti Suzuki</h2>
+                <p>$50/per day</p>
+                <a href="#" class="btnBook">Book</a>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------- Booking Form ----------------------->
+    <div class="section hideform" id="booking">
+        <div class="section-center">
+            <div class="booking-form">
+                
+                <button class="close" onclick="closeForm()">X</button>
+                
+                <div class="form-header">
+                    <h1>Make Your Booking</h1>
+                </div>
+                <div class="details">
+                    <img src="Images/sedan-filter.jpeg" alt="hyundai verna" width="100%">
+                    <h3>Location</h3>
+                    <p>Synergy KB, Singapore 417800</p>
+                    <h3>Specifications</h3>
+                    <ul class="specs-list">
+                        <li>Body Type: Sedan</li>
+                        <li>Model: Verna</li>
+                        <li>Engine Capacity: 1482cc</li>
+                        <li>Transmission: Automatic</li>
+                        <li>Seats: 5</li>
+                        <li>Doors: 4</li>
+                        <li>Colour: Black</li>
+                        <li>Fuel: Petrol</li>
+                    </ul>
+                </div>
+                
+
+                <!--Form-->
+                <form action="checkout.html" method="post">
+                    <div class="elem-group">
+                        <label for="name">Name:</label>
+                        <input type="text" name="customer_name" id="name" placeholder="Full Name" 
+                        pattern=[A-Z\sa-z]{3,20} required>
+                    </div>
+
+                    <div class="elem-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="customer_phone" id="phone" placeholder="12345678" 
+                        pattern="[0-9]{8}" required>
+                    </div>
+                    <hr>
+        
+                    <div class="elem-group inlined">
+                        <label for="pickup-date">Pick Up</label>
+                        <input type="date" name="pickup" id="pickup-date" required>
+                    </div>
+
+                    <div class="elem-group inlined">
+                        <label for="return-date">Return</label>
+                        <input type="date" name="return" id="return-date" required>
+                    </div>
+
+                    <div class="elem-group inlined">
+                        <label for="pickup-time">Pick up time</label>
+                        <input type="time" name="pickup-time" id="pickup-time" required>
+                    </div>
+
+                    <div class="elem-group inlined">
+                        <label for="return-time">Return time</label>
+                        <input type="time" name="return-time" id="return-time" required>
+                    </div>
+                    <hr>
+
+                    <div class="elem-group">
+                        <label for="message">Comment</label>
+                        <textarea id="message" name="customer_message" placeholder="Tell us anything here!"></textarea>
+                    </div>
+
+                    <button class="book" type="submit" id="submit" >Proceed to checkout</Buttonclass>
+
+                </form>
+                <!--Form-->
+            </div>
+        </div>
+    </div>
+    <!----------------------- Booking Form ----------------------->
+    
+    <footer>© Copyright 2024 All Right Reserved By Azoom Car Rental</footer>
+
+    <script src="car&rates.js"></script>
+</body>
+</html>

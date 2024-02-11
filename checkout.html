@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout.css">
+    <title>Checkout Page</title>
+</head>
+<body>
+    <div id="wrapper">
+        <!------------------- Booking summary section ------------------>
+        <div class="container1">
+            <div class="order">
+                <h2>Your booking summary</h2>
+                <div class="item">
+                    <img src='Images/sedan-filter.jpeg' alt='hyundai verna car'>
+                    <div class="info">
+                        <h4>Hyndai Verna</h4>
+                        <p class="quantity">Days: 1 day</p>
+                        <p class="price">$65/day</p>
+                    </div> 
+                </div> 
+                <hr>
+                <h3 class="total">TOTAL: $65</h3>
+                <a href="cars&rates.html" class="return">Back to booking</a>
+            </div> 
+        </div>
+    
+        <!------------------- Checkout Section ------------------->
+        <div class="container2">
+            <div class="checkout">
+                <p><i class="fas fa-check-circle"></i>Checkout</p>
+
+                <!------------------- Payment section ------------------->
+                <div class="payment">
+                    <div class="content">
+                        <div class="infos">
+                            <div class="method">
+                                <h2>Choose a payment method</h2>
+                                <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1978060/visa.png' alt='Visa' class="visa">
+                                <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1978060/mastercard.png' alt='Mastercard' class="mastercard">
+                                <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1978060/paypal.png' alt='Paypal' class="paypal">
+                            </div> 
+                            
+                            <!------------------- Payment details ------------------->
+                            <div class="cardNumber">
+                                <p class="title">Credit card number</p><br>
+                                <input type="text" class="number">
+                                <input type="text" class="number">
+                                <input type="text" class="number">
+                                <input type="text" class="number">
+                            </div>
+                            
+                            <div class="cardHolderName">
+                                <p class="title">Card holder name</p>
+                                <input type="text">
+                            </div> 
+                            
+                            <div class="expiration">
+                                <p class="title">Expiration date</p>
+                                <select>
+                                    <option>Month</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+    
+                                <select>
+                                    <option>Year</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                </select>
+                            </div> 
+                            
+                            <div class="security">
+                                <p class="title">Security</p>
+                                <input type="text">
+                            </div>
+
+                            <button class="show-popup"> Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!------------------- Payment Confirm Modal ------------------->
+    <div class="popup-container">
+        <div class="popup-box">
+            <h1>Booking Confirmation</h1>
+            <p>Your car booking is confirmed. Please collect your car at Synergy KB,
+            Singapore 417800.</p>
+            <button class="close-btn" onclick="returnHome()">OK</button>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

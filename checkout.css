@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: #242424;
+    font-weight: 600;
+}
+
+#wrapper {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.container1 {
+    background-color: white;
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+    width: 33.333%;
+}
+
+.container2 {
+    background-color: #ddc8af;
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+    width: 66.666%;
+}
+
+.order {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.order h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.item {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+.item:last-of-type {
+    margin-bottom: 0;
+}
+
+.item img {
+    float: left;
+    margin-right: 3%;
+    width: 100%;
+}
+
+.item .info {
+    padding: 3%;
+}
+
+.item .quantity {
+    font-size: 0.8em;
+}
+
+.item .price {
+    background-color: #3FB158;
+    position: absolute;
+    padding: 1% 2%;
+    color: white;
+    bottom: 5%;
+    right: 2%;
+}
+
+hr {
+    border-top: 1px solid #A8A8A8;
+}
+
+.ship,
+.total {
+    margin: 10% 0;
+    text-align: right;
+}
+
+.total {
+    font-size: 1.5em;
+}
+
+.checkout {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.checkout p {
+    display: inline-flex;
+    flex-direction: row;
+    margin-right: 4%;
+}
+
+.checkout p,
+.checkout i {
+    color: #2a2a2a;
+    font-size: 1.6em;
+}
+
+.checkout i {
+    margin-right: 4%;
+    font-family: 'Poppins';
+    font-weight: 800;
+}
+
+.payment {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    background-image: url(Images/logo.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+    margin-top: 3.8%;
+}
+
+.infos {
+    width: 50%;
+    padding: 3% 5% 0 5%;
+}
+
+.infos h2 {
+    color: #ea6153;
+    font-size: 1.8em;
+    margin-bottom: 10%;
+}
+
+.visa,
+.mastercard,
+.paypal {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    width: 25%;
+    height: auto;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+
+.mastercard,
+.paypal {
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.mastercard:hover,
+.paypal:hover {
+    opacity: 1;
+}
+
+.paypal {
+    margin-right: 0;
+}
+
+.title {
+    color: #242424 !important;
+    opacity: 1 !important;
+    font-size: 1em !important;
+}
+
+input,
+select {
+    border: none;
+    padding: 2%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 2%;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+.number {
+    width: 20%;
+    margin-right: 5.3%;
+    margin-bottom: 10%;
+}
+
+.number:last-of-type {
+    margin-right: 0;
+}
+
+.cardHolderName {
+    margin-bottom: 10%;
+}
+
+.cardHolderName input {
+    width: 100%;
+}
+
+select {
+    margin-right: 2%;
+}
+
+select:last-of-type {
+    margin-right: 0;
+}
+
+.expiration,
+.security {
+    margin-bottom: 10%;
+}
+
+.security input {
+    width: 25%;
+}
+
+.show-popup {
+    background-color: #ddc8af;
+    width: 100%;
+    padding: 5%;
+    border: none;
+    color: #2a2a2a;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 4%;
+}
+
+.show-popup:hover {
+    background-color: #2a2a2a;
+    color: #ddc8af;
+}
+
+/* ---------------------------Booking Confirmation Modal---------------------------*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f2f2f2;
+}
+
+.popup-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: .4s ease;
+}
+
+.popup-container .popup-box {
+    width: 500px;
+    background: #f2f2f2;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    padding: 30px;
+    transform: scale(0);
+}
+
+.popup-container.active .popup-box {
+    transform: scale(1);
+    transition: .4s ease;
+    transition-delay: .25s;
+}
+
+.popup-box h1 {
+    color: #ea6153;
+    line-height: 1;
+}
+
+.popup-box p {
+    color: #333;
+    margin: 12px 0 20px;
+    font-size: 14px;
+}
+
+.popup-box .close-btn {
+    width: 100%;
+    height: 45px;
+    background: #ddc8af;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 18px;
+    color: #2a2a2a;
+    font-weight: 500;
+}
+
+.close-btn:hover {
+    background-color: #2a2a2a;
+    color: #ddc8af;
+    transition: all 0.3s ease-in-out;
+}
