@@ -303,11 +303,13 @@ a {
     font-family: 'Poppins';
     font-weight: 600;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 iframe {
     width: 80%;
     height: 500px;
+    margin-bottom: 30px;
 }
 
 /*---------------------------Footer---------------------------*/
