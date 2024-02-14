@@ -199,13 +199,13 @@ a {
 
 .parallax1 {
     background: url(Images/parallax1.JPG);
-    min-height: 900px;
+    min-height: 800px;
     color: #c51212;
 }
 
 .parallax2 {
     background: url(Images/parallax2.JPG);
-    min-height: 800px;
+    min-height: 600px;
     color: #ffffff;
 }
 
@@ -221,7 +221,7 @@ a {
     position: absolute;
     color: #ffffff;
     font-size: 550%;
-    padding-top: 30%;
+    padding-top: 23%;
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 8px;
@@ -230,7 +230,7 @@ a {
 
 .heading-sm {
     position: absolute;
-    padding-top: 30%;
+    padding-top: 18%;
     width: 100%;
     color: #fff;
     font-size: 250%;
