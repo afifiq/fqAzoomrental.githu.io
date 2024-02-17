@@ -85,7 +85,7 @@ a {
 #hero {
     width: 100%;
     height: 650px;
-    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../Assignment_2/Images/dealership-bg.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(Images/dealership-hero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
